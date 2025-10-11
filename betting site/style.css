@@ -1,0 +1,187 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #10a560;
+  color: #333;
+  line-height: 1.4;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: #eee;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #ddd;
+}
+
+/* Header */
+.header {
+  background: #c02e02f3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4f46e5;
+}
+
+.search-bar input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  outline: none;
+  width: 200px;
+}
+
+.wallet {
+  font-weight: bold;
+}
+
+/* Layout */
+.container {
+  display: grid;
+  grid-template-columns: 220px 1fr 300px;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sidebar, .markets, .betslip {
+  background: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.sidebar ul li {
+  margin-bottom: 8px;
+}
+
+.sidebar ul.sports {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.markets h2 {
+  margin-bottom: 15px;
+}
+
+.market-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f3f4f6;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.odds button {
+  margin-left: 5px;
+  background: #4f46e5;
+  color: white;
+}
+
+.odds button:hover {
+  background: #4338ca;
+}
+
+/* Bet Slip */
+.betslip h3 {
+  margin-bottom: 10px;
+}
+
+.empty-slip {
+  text-align: center;
+  color: #777;
+}
+
+.betslip-container .bet {
+  background: #f3f4f6;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.betslip-container .bet input {
+  width: 60px;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.betslip-container .remove {
+  color: red;
+  font-size: 12px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.totals {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.place-bet {
+  background: #16a34a;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.clear-slip {
+  background: #e5e7eb;
+  width: 100%;
+  margin-top: 5px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 10px;
+  background: #fff;
+  border-top: 1px solid #eee;
+  margin-top: 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

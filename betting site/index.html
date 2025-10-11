@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BetMaster - Prototype</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">BetMaster</div>
+    <div class="search-bar">
+      <input type="text" id="search" placeholder="Search matches, leagues..." />
+    </div>
+    <div class="wallet">
+      <Balance:$<span id="balance">120.00</span>
+    </div>
+  </header>
+
+  <!-- Main Layout -->
+  <main class="container">
+    <!-- Filters -->
+    <aside class="sidebar">
+      <h3>Quick Filters</h3>
+      <ul>
+        <li><button>Live Now</button></li>
+        <li><button>Popular</button></li>
+        <li><button>Today</button></li>
+        <li><button>Early Markets</button></li>
+      </ul>
+
+      <h3>Sports</h3>
+      <ul class="sports">
+        <li><button>Soccer</button></li>
+        <li><button>Tennis</button></li>
+        <li><button>Basketball</button></li>
+        <li><button>Esports</button></li>
+      </ul>
+    </aside>
+
+    <!-- Markets -->
+    <section class="markets">
+      <h2>Available Matches</h2>
+      <div id="market-list" class="market-list">
+        <!-- Matches will be injected here -->
+      </div>
+    </section>
+
+    <!-- Bet Slip -->
+    <aside class="betslip">
+      <h3>Bet Slip (<span id="selection-count">0</span>)</h3>
+      <div id="betslip-container" class="betslip-container">
+        <p class="empty-slip">Add selections to build your bet.</p>
+      </div>
+      <div class="totals">
+        <div class="row">
+          <span>Total Stake:</span>
+          <span>$<span id="total-stake">0.00</span></span>
+        </div>
+        <div class="row">
+          <span>Potential Return:</span>
+          <span>$<span id="potential-return">0.00</span></span>
+        </div>
+        <button id="place-bet" class="place-bet">Place Bet</button>
+        <button id="clear-slip" class="clear-slip">Clear Slip</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 BetMaster — Prototype. Play Responsibly.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
